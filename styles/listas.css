@@ -1,0 +1,19 @@
+/* login */
+.errorLogin{
+  border: 1px solid red;
+}
+
+.errorLogin + small{
+  color: red;
+  display: block;
+}
+
+/* signup */
+.invalid{
+  border: 1px solid red;
+}
+
+.invalid + small{
+  color: red;
+  display: block;
+}
