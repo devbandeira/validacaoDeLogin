@@ -45,6 +45,7 @@ btn.addEventListener("click", (event) => {
   });
 });
 
+//REMOVENDO OS PARAMETROS DE CAMPOS INVÁLIDOS COM "KEYUP"
 arrayData.forEach((element) => {
   element.addEventListener("keyup", () => {
     if (element.classList.contains("invalid")) {
@@ -52,4 +53,49 @@ arrayData.forEach((element) => {
       element.classList.remove("invalid");
     }
   });
+});
+
+
+//CADASTRO DE NOVO USUÁRIO
+btn.addEventListener('click', (event) => {
+  const dataPostUser = {
+
+    "firstName": handleName.value,
+    "lastName": handleNick.value,
+    "email": handleEmail.value,
+    "password": handlePassword.value
+
+  };
+
+  const newUser = fetch('https://ctd-todo-api.herokuapp.com/v1/users', {
+    method: "POST",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(dataPostUser),
+  });
+
+  newUser.then((response) => {
+
+    return response.json();
+
+  }).then((data) => {
+
+    if (typeof data === "object") {
+
+      alert("Cadastro concluído");
+      sessionStorage.setItem("jwt", data.jwt);
+
+    } else {
+
+      alert(data);
+
+    };
+
+  }).catch((error) => {
+
+    console.log(error);
+
+  });
+
+  event.preventDefault();
+
 });
