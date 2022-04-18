@@ -14,12 +14,6 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- ----------------------------- sweet alert ----------------------------- -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- CDN example (unpkg) -->
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
   <title>To-Do App</title>
@@ -32,7 +26,7 @@
     </nav>
 
     <div class="user-info">
-      <p>Nome usuário</p>
+      <p class="userName">Nome usuário</p>
       <div class="user-image"></div>
       <p id="closeApp">Finalizar sessão</i>
       </p>
@@ -43,36 +37,40 @@
   <form class="nova-tarefa">
     <div class="not-done "></div>
     <input id="novaTarea" type="text" placeholder="Nova tarefa">
-    <button type="submit">
+    <button class='btnNew'type="submit">
       <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
   </form>
 
 
   <ul class="tarefas-pendentes">
-    <div id="skeleton">
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
+    <!-- div para criar as novas tarefas -->
+    <div class="creat-tasks"></div>
 
+    <!-- div das tarefas criadas como exemplo para carrgamento -->
+    <div id="skeleton">
+      
+      <li class="tarefa">
+        <div class="not-done"></div>
+        <div class="descricao">
+          <p class="nome">Nova tarefa</p>
+          <p class="timestamp">Criada em: 15/07/21</p>
+        </div>
+      </li>
+      <li class="tarefa">
+        <div class="not-done"></div>
+        <div class="descricao">
+          <p class="nome">Nova tarefa</p>
+          <p class="timestamp">Criada em: 15/07/21</p>
+        </div>
+      </li>
+      <li class="tarefa">
+        <div class="not-done"></div>
+        <div class="descricao">
+          <p class="nome">Nova tarefa</p>
+          <p class="timestamp">Criada em: 15/07/21</p>
+        </div>
+      </li>
     </div>
   </ul>
 
@@ -81,6 +79,15 @@
 
   </ul>
 
+
+    <!-- ----------------------------- sweet alert ----------------------------- -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CDN example (unpkg) -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script src="./scripts/tarefas.js"></script>
 </body>
 
 </html>

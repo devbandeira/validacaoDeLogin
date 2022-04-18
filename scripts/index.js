@@ -33,6 +33,7 @@ const validateLogin = function (element) {
     element.classList.remove("errorLogin");
   }
 };
+
 //FIM DAS FUNÇÕES REUTILIZAVEIS
 
 //-> VALIDA OS CAMPOS DE INPUT QUANDO O EVENTO CLICK É FEITO
@@ -76,3 +77,34 @@ handlePassword.addEventListener("blur", (element) => {
   removeError(handlePassword);
   invalidadeLogin(handlePassword);
 });
+
+//LOGIN DE USUARIO 16-04-2022
+handleBtnAcess.onclick = (event) => {
+  event.preventDefault();
+
+  const dataUser = {
+    email: handleEmail.value,
+    password: handlePassword.value,
+  };
+
+  const newLogin = fetch("https://ctd-todo-api.herokuapp.com/v1/users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(dataUser),
+  });
+
+  newLogin
+    .then((response) => {
+      return response.json();
+    })
+    .then((responseData) => {
+      if (typeof responseData === "object") {
+        sessionStorage.setItem("jwt", responseData.jwt);
+        window.location.href = "tarefas.html";
+      } else {
+        alert(responseData);
+      }
+    });
+};
