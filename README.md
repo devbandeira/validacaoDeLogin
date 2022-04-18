@@ -1,20 +1,20 @@
-# Comunicação com API para criaçãod e uma aplicação ToDo.
+# Comunicação com API para criaçãod e uma aplicação ToDo.<br/>
 
-## Listas de implementações
+## Listas de implementações<br/>
 
 
--> [✅] Validção dos campos de login e de cadastro;
--> [✅] Comunicação com a API para criação de usuário;
--> [✅] Comunicação com a API para login de usuário;
--> [✅] Comunicação com a API para criação de tarefas do app ToDO;
--> [✅] Comunicação com a API para listar as tarefas do usuário logado;
--> [✅] Comunicação com a API para obtenção dos dados do usuário logado;
--> [ ] Comunicação com a API para excluir as tarefas do usuário logado;
--> [ ] Comunicação com a API para atualizar as taferas do usuário logado;
--> [ ] Comunicação com a API para listar uma tarefa específica.
+-> [✅] Validção dos campos de login e de cadastro;<br/>
+-> [✅] Comunicação com a API para criação de usuário;<br/>
+-> [✅] Comunicação com a API para login de usuário;<br/>
+-> [✅] Comunicação com a API para criação de tarefas do app ToDO;<br/>
+-> [✅] Comunicação com a API para listar as tarefas do usuário logado;<br/>
+-> [✅] Comunicação com a API para obtenção dos dados do usuário logado;<br/>
+-> [ ] Comunicação com a API para excluir as tarefas do usuário logado;<br/>
+-> [ ] Comunicação com a API para atualizar as taferas do usuário logado;<br/>
+-> [ ] Comunicação com a API para listar uma tarefa específica.<br/>
 
-## Melhorias
+## Melhorias<br/>
 
--> [ ] Responsividade;
--> [ ] Loading em tela;
+-> [ ] Responsividade;<br/>
+-> [ ] Loading em tela;<br/>
 
