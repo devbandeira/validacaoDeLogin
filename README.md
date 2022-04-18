@@ -1,4 +1,4 @@
-# Comunicação com API para criaçãod e uma aplicação ToDo.<br/>
+# Comunicação com API para criação de uma aplicação ToDo.<br/>
 
 ## Listas de implementações<br/>
 
