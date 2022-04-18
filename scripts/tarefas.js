@@ -10,7 +10,7 @@ function date(date) {
 }
 
 //pega as informacoes do usuario logado
-fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe/", {
+fetch(window.urlApi + "users/getMe/", {
   method: "GET",
   headers: {
     "Content-type": "application/json",
@@ -24,7 +24,7 @@ fetch("https://ctd-todo-api.herokuapp.com/v1/users/getMe/", {
   });
 
 //pega as informacoes das tasks do usuario logado
-fetch("https://ctd-todo-api.herokuapp.com/v1/tasks/", {
+fetch(window.urlApi + "tasks/", {
   method: "GET",
   headers: {
     "Content-type": "application/json",
@@ -71,7 +71,7 @@ btnNew.onclick = (event) => {
     description: inputNewTask.value,
     completed: false,
   };
-  fetch("https://ctd-todo-api.herokuapp.com/v1/tasks/", {
+  fetch(window.urlApi + "tasks/", {
     method: "POST",
     headers: {
       "Content-type": "application/json",

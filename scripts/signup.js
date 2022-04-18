@@ -64,7 +64,7 @@ btn.addEventListener("click", (event) => {
     password: handlePassword.value,
   };
 
-  const newUser = fetch("https://ctd-todo-api.herokuapp.com/v1/users", {
+  const newUser = fetch(window.urlApi + "users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(dataPostUser),

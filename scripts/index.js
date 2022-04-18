@@ -87,7 +87,7 @@ handleBtnAcess.onclick = (event) => {
     password: handlePassword.value,
   };
 
-  const newLogin = fetch("https://ctd-todo-api.herokuapp.com/v1/users/login", {
+  const newLogin = fetch(window.urlApi + "users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
